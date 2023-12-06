@@ -1,0 +1,146 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.Weather {
+    background: #131E25;
+    border: 1px solid #f8f5e4;
+    border-radius: 16px;
+    color: #f8f5e4;
+    font-family: "Outfit", sans-serif;
+    margin: auto;
+    padding: 15px;
+}
+
+.Weather a {
+    color: rgba(248, 245, 228, 0.9);
+}
+
+.Weather a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Weather .search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.Weather .search-form-input {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid #f8f5e4;
+    border-radius: 5px 0 0 5px;
+    color: #f8f5e4;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    width: 85%;
+}
+
+.Weather .search-form-button {
+    background: rgba(248, 245, 228, 0.75);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #000;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.Weather .weather-app-icon {
+    display: block;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
+    margin: auto;
+    padding: 0 0 10px 0;
+}
+
+.Weather h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+}
+
+.Weather ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Weather li {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+    list-style: none;
+}
+
+.Weather .temperature {
+    color: #f8f5e4;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+.Weather canvas {
+    margin: 10px auto;
+}
+
+.Weather .unit {
+    color: #f8f5e4;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    top: -18px;
+}
+
+.Weather .date {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.Weather .weather-app-details {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.Weather .weather-app-details .row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.Weather .weather-app-details .left {
+    text-align: left;
+}
+
+.Weather .weather-app-details .right {
+    text-align: right;
+}
+
+.Weather .weather-forecast-icon {
+    display: block;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
+    margin: auto;
+}
+
+.Weather footer {
+    font-size: 11px;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+    }
+
+    .Weather {
+        border-radius: 0;
+        height: 100vh;
+    }
+}
