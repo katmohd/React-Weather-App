@@ -61,12 +61,12 @@ export default function Weather(props) {
           </header>
           <main>
             <div className="WeatherInfo">
-              <div className="weather-app-icon mt-2 mb-2">
+              <div className="weather-app-icon mt-3 mb-3">
                 <img
                   src={require(`./icons/${weatherData.icon}.svg`)}
                   alt="weather-icon"
-                  width="150"
-                  height="150"
+                  width="100"
+                  height="100"
                 />
               </div>
               <h1>{weatherData.city}</h1>

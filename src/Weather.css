@@ -8,33 +8,34 @@
 }
 
 .container.Atmosphere {
-    background: url("/src/images/Atmosphere.jpg");
+    background: #3CD3AD;
 }
 
 .container.Clear {
-    background: url("/src/images/Clear.jpg");
+    background: #f7b733;
 }
 
 .container.Clouds {
-    background: url("/src/images/Clouds.jpg");
+    background: #1F1C2C;
 }
 
 .container.Drizzle {
-    background: url("/src/images/Drizzle.jpg");
+    background: #076585;
 }
 
 .container.Rain {
-    background: url("/src/images/Rain.jpg");
+    background: #005BEA;
 }
 
 .container.Snow {
-    background: url("/src/images/Snow.jpg");
+    background: #00d2ff;
 }
 
 .container.Thunderstorm {
-    background: url("/src/images/Thunderstorm.jpg");
+    background: #616161;
 }
 
+/*
 .container.Atmosphere,
 .container.Clear,
 .container.Clouds,
@@ -46,9 +47,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+*/
 .Weather {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     color: #f8f5e4;
     font-family: "Outfit", sans-serif;
