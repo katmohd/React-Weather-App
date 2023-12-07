@@ -1,16 +1,60 @@
 .container {
+    border-radius: 16px;
     display: flex;
-    min-height: 100vh;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.container.Atmosphere {
+    background: url("/src/images/Atmosphere.jpg");
+}
+
+.container.Clear {
+    background: url("/src/images/Clear.jpg");
+}
+
+.container.Clouds {
+    background: url("/src/images/Clouds.jpg");
+}
+
+.container.Drizzle {
+    background: url("/src/images/Drizzle.jpg");
+}
+
+.container.Rain {
+    background: url("/src/images/Rain.jpg");
+}
+
+.container.Snow {
+    background: url("/src/images/Snow.jpg");
+}
+
+.container.Thunderstorm {
+    background: url("/src/images/Thunderstorm.jpg");
+}
+
+.container.Atmosphere,
+.container.Clear,
+.container.Clouds,
+.container.Drizzle,
+.container.Rain,
+.container.Snow,
+.container.Thunderstorm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Weather {
-    background: #131E25;
-    border: 1px solid #f8f5e4;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     color: #f8f5e4;
     font-family: "Outfit", sans-serif;
     margin: auto;
     padding: 15px;
+    width: 600px;
 }
 
 .Weather a {
@@ -136,11 +180,13 @@
 
 @media only screen and (max-width: 600px) {
     .container {
+        border-radius: 0;
         padding: 0;
     }
 
     .Weather {
         border-radius: 0;
         height: 100vh;
+        margin: auto;
     }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WEATHER_API_KEY from "./api";
-import WeatherInfo from "./WeatherInfo";
+import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 import axios from "axios";
 import "./Weather.css";
 
@@ -20,7 +21,7 @@ export default function Weather(props) {
       feels: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      condition: response.data.weather[0].condition,
+      condition: response.data.weather[0].main,
     });
   }
 
@@ -40,7 +41,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="container">
+      <div className={`container ${weatherData.condition}`}>
         <div className="Weather">
           <header>
             <form onSubmit={handleSubmit} className="search-form">
@@ -59,7 +60,38 @@ export default function Weather(props) {
             </form>
           </header>
           <main>
-            <WeatherInfo data={weatherData} />
+            <div className="WeatherInfo">
+              <div className="weather-app-icon mt-2 mb-2">
+                <img
+                  src={require(`./icons/${weatherData.icon}.svg`)}
+                  alt="weather-icon"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h1>{weatherData.city}</h1>
+              <div>
+                <WeatherTemperature celsius={weatherData.temperature} />
+              </div>
+              <h1 className="text-capitalize">{weatherData.description}</h1>
+              <div className="date mt-2">
+                <FormattedDate date={weatherData.date} />
+              </div>
+              <div className="weather-app-details">
+                <div className="row mt-2">
+                  <div className="col left">Feels like:</div>
+                  <div className="col right">{weatherData.feels}°C</div>
+                </div>
+                <div className="row">
+                  <div className="col left">Humidity:</div>
+                  <div className="col right">{weatherData.humidity}%</div>
+                </div>
+                <div className="row">
+                  <div className="col left">Wind:</div>
+                  <div className="col right">{weatherData.wind}km/h</div>
+                </div>
+              </div>
+            </div>
           </main>
           <footer>
             This project was coded by{" "}
@@ -80,7 +112,7 @@ export default function Weather(props) {
             </a>{" "}
             and{" "}
             <a
-              href="https://endearing-cucurucho-8053a9.netlify.app/"
+              href="https://endearing-cucurucho-8053a9.netlify.app//"
               target="_blank"
               rel="noopener noreferrer"
             >
