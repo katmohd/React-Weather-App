@@ -35,19 +35,6 @@
     background: #616161;
 }
 
-/*
-.container.Atmosphere,
-.container.Clear,
-.container.Clouds,
-.container.Drizzle,
-.container.Rain,
-.container.Snow,
-.container.Thunderstorm {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-*/
 .Weather {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
