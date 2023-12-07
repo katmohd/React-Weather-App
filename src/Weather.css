@@ -1,4 +1,5 @@
 .container {
+    background: radial-gradient(993px at 50% 150%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%);
     border-radius: 16px;
     display: flex;
     margin: auto;
@@ -8,31 +9,31 @@
 }
 
 .container.Atmosphere {
-    background: #3CD3AD;
+    background: radial-gradient(993px at 50% 150%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%);
 }
 
 .container.Clear {
-    background: #f7b733;
+    background: radial-gradient(circle at 50% 125%, rgb(250, 138, 138) 0%, rgb(198, 124, 204) 90%);
 }
 
 .container.Clouds {
-    background: #1F1C2C;
+    background: linear-gradient(to top, rgb(12, 20, 69) 16.9%, rgb(71, 30, 84) 89.9%);
 }
 
 .container.Drizzle {
-    background: #076585;
+    background: linear-gradient(to top, #64b3f4 0%, #c2e59c 125%);
 }
 
 .container.Rain {
-    background: #005BEA;
+    background: linear-gradient(to bottom, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%);
 }
 
 .container.Snow {
-    background: #00d2ff;
+    background: linear-gradient(to top, rgb(191, 241, 236) -42.3%, rgb(109, 192, 236) 84.1%);
 }
 
 .container.Thunderstorm {
-    background: #616161;
+    background: linear-gradient(to top, #868f96 0%, #596164 100%);
 }
 
 .Weather {
@@ -83,28 +84,15 @@
 
 .Weather .weather-app-icon {
     display: block;
-    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
     margin: auto;
-    padding: 0 0 10px 0;
+    padding: 0;
 }
 
 .Weather h1 {
     font-size: 20px;
     font-weight: 500;
-    line-height: 1;
+    line-height: 0.5;
     margin: 0;
-}
-
-.Weather ul {
-    margin: 0;
-    padding: 0;
-}
-
-.Weather li {
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 19px;
-    list-style: none;
 }
 
 .Weather .temperature {
@@ -150,6 +138,7 @@
 }
 
 .Weather .weather-app-details .right {
+    font-weight: 500;
     text-align: right;
 }
 

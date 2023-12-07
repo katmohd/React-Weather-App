@@ -62,23 +62,23 @@ export default function Weather(props) {
           <main>
             <div className="WeatherInfo">
               <div className="weather-app-icon mt-3 mb-3">
-                <img
+                <iframe
                   src={require(`./icons/${weatherData.icon}.svg`)}
-                  alt="weather-icon"
+                  title="weather icon"
                   width="100"
                   height="100"
-                />
+                ></iframe>
               </div>
               <h1>{weatherData.city}</h1>
               <div>
                 <WeatherTemperature celsius={weatherData.temperature} />
               </div>
               <h1 className="text-capitalize">{weatherData.description}</h1>
-              <div className="date mt-2">
+              <div className="date mt-4 mb-4">
                 <FormattedDate date={weatherData.date} />
               </div>
               <div className="weather-app-details">
-                <div className="row mt-2">
+                <div className="row">
                   <div className="col left">Feels like:</div>
                   <div className="col right">{weatherData.feels}°C</div>
                 </div>
