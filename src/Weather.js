@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WEATHER_API_KEY from "./api";
-import FormattedDate from "./FormattedDate";
-import WeatherTemperature from "./WeatherTemperature";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -60,38 +60,8 @@ export default function Weather(props) {
             </form>
           </header>
           <main>
-            <div className="WeatherInfo">
-              <div className="weather-app-icon mt-3 mb-3">
-                <iframe
-                  src={require(`./icons/${weatherData.icon}.svg`)}
-                  title="weather icon"
-                  width="100"
-                  height="100"
-                ></iframe>
-              </div>
-              <h1>{weatherData.city}</h1>
-              <div>
-                <WeatherTemperature celsius={weatherData.temperature} />
-              </div>
-              <h1 className="text-capitalize">{weatherData.description}</h1>
-              <div className="date mt-4 mb-4">
-                <FormattedDate date={weatherData.date} />
-              </div>
-              <div className="weather-app-details">
-                <div className="row">
-                  <div className="col left">Feels like:</div>
-                  <div className="col right">{weatherData.feels}°C</div>
-                </div>
-                <div className="row">
-                  <div className="col left">Humidity:</div>
-                  <div className="col right">{weatherData.humidity}%</div>
-                </div>
-                <div className="row">
-                  <div className="col left">Wind:</div>
-                  <div className="col right">{weatherData.wind}km/h</div>
-                </div>
-              </div>
-            </div>
+            <WeatherInfo data={weatherData} />
+            <WeatherForecast coordinates={weatherData.coordinates} />
           </main>
           <footer>
             This project was coded by{" "}

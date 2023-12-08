@@ -24,10 +24,12 @@ export default function WeatherForecastDay(props) {
     <div>
       <div className="WeatherForecast-day">{day()}</div>
       <div className="weather-forecast-icon">
-        <img
+        <iframe
           src={require(`./icons/${props.data.weather[0].icon}.svg`)}
-          alt="forecast-icon"
-        />
+          title="forecast icon"
+          width="50"
+          height="50"
+        ></iframe>
       </div>
       <div className="WeatherForecast-temperatures">
         <span className="WeatherForecast-temperature-max">

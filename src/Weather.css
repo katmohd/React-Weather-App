@@ -1,5 +1,5 @@
 .container {
-    background: radial-gradient(993px at 50% 150%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%);
+    background: radial-gradient(993px at 50% 150%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%) fixed;
     border-radius: 16px;
     display: flex;
     margin: auto;
@@ -8,32 +8,28 @@
     transition: all 200ms ease-in-out;
 }
 
-.container.Atmosphere {
-    background: radial-gradient(993px at 50% 150%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%);
-}
-
 .container.Clear {
-    background: radial-gradient(circle at 50% 125%, rgb(250, 138, 138) 0%, rgb(198, 124, 204) 90%);
+    background: linear-gradient(to top, rgb(250, 138, 138) 0%, rgb(198, 124, 204) 90%) fixed;
 }
 
 .container.Clouds {
-    background: linear-gradient(to top, rgb(12, 20, 69) 16.9%, rgb(71, 30, 84) 89.9%);
+    background: linear-gradient(to top, rgb(12, 20, 69) 16.9%, rgb(71, 30, 84) 89.9%) fixed;
 }
 
 .container.Drizzle {
-    background: linear-gradient(to top, #64b3f4 0%, #c2e59c 125%);
+    background: linear-gradient(to top, #64b3f4 0%, #c2e59c 125%) fixed;
 }
 
 .container.Rain {
-    background: linear-gradient(to bottom, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%);
+    background: linear-gradient(to bottom, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%) fixed;
 }
 
 .container.Snow {
-    background: linear-gradient(to top, rgb(191, 241, 236) -42.3%, rgb(109, 192, 236) 84.1%);
+    background: linear-gradient(to top, rgb(191, 241, 236) -42.3%, rgb(109, 192, 236) 84.1%) fixed;
 }
 
 .container.Thunderstorm {
-    background: linear-gradient(to top, #868f96 0%, #596164 100%);
+    background: linear-gradient(to top, #868f96 0%, #596164 100%) fixed;
 }
 
 .Weather {
@@ -43,7 +39,7 @@
     font-family: "Outfit", sans-serif;
     margin: auto;
     padding: 15px;
-    width: 600px;
+    width: 550px;
 }
 
 .Weather a {
@@ -144,18 +140,18 @@
 
 .Weather .weather-forecast-icon {
     display: block;
-    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
     margin: auto;
 }
 
 .Weather footer {
+    border-top: 1px solid #f8f5e4;
     font-size: 11px;
     margin: 0;
     padding-top: 10px;
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
     .container {
         border-radius: 0;
         padding: 0;
