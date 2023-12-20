@@ -80,8 +80,11 @@
 
 .Weather .weather-app-icon {
     display: block;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
+    line-height: 1;
     margin: auto;
     padding: 0;
+    width: 100%;
 }
 
 .Weather h1 {
@@ -140,7 +143,11 @@
 
 .Weather .weather-forecast-icon {
     display: block;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(25%) saturate(272%) hue-rotate(329deg) brightness(111%) contrast(94%);
+    line-height: 1;
     margin: auto;
+    padding: 0;
+    width: 100%;
 }
 
 .Weather footer {

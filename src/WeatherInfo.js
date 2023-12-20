@@ -5,13 +5,13 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="weather-app-icon">
-        <iframe
+      <div className="weather-app-icon mt-3 mb-3">
+        <img
           src={require(`./icons/${props.data.icon}.svg`)}
-          title="weather icon"
-          width="100"
-          height="100"
-        ></iframe>
+          alt="weather icon"
+          width="150"
+          height="150"
+        />
       </div>
       <h1 className="mb-1">{props.data.city}</h1>
       <div>
